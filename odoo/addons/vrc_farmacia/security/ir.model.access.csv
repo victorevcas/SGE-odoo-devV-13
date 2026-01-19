@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vrc_farmacia_vrc_farmacia,vrc_farmacia.vrc_farmacia,model_vrc_farmacia_vrc_farmacia,base.group_user,1,1,1,1
