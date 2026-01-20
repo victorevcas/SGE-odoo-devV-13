@@ -4,7 +4,7 @@ class Medicamento(models.Model):
     _name = 'farmacia.medicamento'
     _description = 'Medicamento'
 
-    name = fields.Char(string="Nombre", required=True)
+    name = fields.Char(string="Nombre", required=True, help="Introduce el nombre del medicamento")
     precio = fields.Float(string="Precio")
     stock = fields.Integer(string="Stock")
     proveedor_id = fields.Many2one(

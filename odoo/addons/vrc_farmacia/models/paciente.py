@@ -6,6 +6,8 @@ class Paciente(models.Model):
 
     name = fields.Char(string="Nombre", required=True)
     edad = fields.Integer(string="Edad")
+    dni = fields.Char(string="DNI/Pasaporte")
+    email = fields.Char(string="Correo Electrónico")
     receta_ids = fields.One2many(
         'farmacia.receta',
         'paciente_id',
