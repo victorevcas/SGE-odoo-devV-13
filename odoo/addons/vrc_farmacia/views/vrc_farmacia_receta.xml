@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="vrc_farmacia.paciente_view_tree" model="ir.ui.view">
+            <field name="name">vrc_farmacia.paciente.tree</field>
+            <field name="model">vrc_farmacia.paciente</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="dni"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vrc_farmacia.paciente_view_form" model="ir.ui.view">
+            <field name="name">vrc_farmacia.paciente.form</field>
+            <field name="model">vrc_farmacia.paciente</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Nombre del Paciente"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <field name="dni"/>
+                            <field name="email"/>
+                        </group>
+                        <notebook>
+                            <page string="Historial de Recetas">
+                                <field name="receta_ids">
+                                    <tree>
+                                        <field name="name" string="Nº Receta"/>
+                                        <field name="fecha"/>
+                                        <field name="estado"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

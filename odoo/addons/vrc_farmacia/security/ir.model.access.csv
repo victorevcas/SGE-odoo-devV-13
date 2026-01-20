@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_medicamento,access_medicamento,model_farmacia_medicamento,,1,1,1,1
-access_proveedor,access_proveedor,model_farmacia_proveedor,,1,1,1,1
-access_paciente,access_paciente,model_farmacia_paciente,,1,1,1,1
-access_receta,access_receta,model_farmacia_receta,,1,1,1,1
+vrc_farmacia.medicamento_basic_user,vrc_farmacia.medicamento_basic_user,model_vrc_farmacia_medicamento,base.group_user,1,1,1,1
+vrc_farmacia.proveedor_basic_user,vrc_farmacia.proveedor_basic_user,model_vrc_farmacia_proveedor,base.group_user,1,1,1,1
+vrc_farmacia.paciente_basic_user,vrc_farmacia.paciente_basic_user,model_vrc_farmacia_paciente,base.group_user,1,1,1,1
+vrc_farmacia.receta_basic_user,vrc_farmacia.receta_basic_user,model_vrc_farmacia_receta,base.group_user,1,1,1,1

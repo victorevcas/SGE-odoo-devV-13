@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="vrc_farmacia.proveedor_view_tree" model="ir.ui.view">
+            <field name="name">vrc_farmacia.proveedor.tree</field>
+            <field name="model">vrc_farmacia.proveedor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="telefono"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vrc_farmacia.proveedor_view_form" model="ir.ui.view">
+            <field name="name">vrc_farmacia.proveedor.form</field>
+            <field name="model">vrc_farmacia.proveedor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Nombre del Proveedor"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="telefono"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Productos Suministrados">
+                                <field name="medicamento_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="precio"/>
+                                        <field name="stock"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

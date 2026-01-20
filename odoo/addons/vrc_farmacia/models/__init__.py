@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from . import models
-from . import medicamentos
-from . import proveedor
-from . import paciente
-from . import receta
+from . import vrc_farmacia_medicamentos
+from . import vrc_farmacia_paciente
+from . import vrc_farmacia_proveedor
+from . import vrc_farmacia_receta

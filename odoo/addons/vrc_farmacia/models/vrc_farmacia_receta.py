@@ -1,18 +1,19 @@
 from odoo import models, fields
 
 class Receta(models.Model):
-    _name = 'farmacia.receta'
+    _name = 'vrc_farmacia.receta'
     _description = 'Receta médica'
 
     name = fields.Char(string="Número de receta", required=True)
     fecha = fields.Date(string="Fecha")
 
     paciente_id = fields.Many2one(
-        'farmacia.paciente',
+        'vrc_farmacia.paciente',
         string="Paciente"
     )
     medicamento_ids = fields.Many2many(
-        'farmacia.medicamento',
+        'vrc_farmacia.medicamento',
+        relation = "vrc_rel_receta_medicamentos",
         string="Medicamentos"
     )
 
