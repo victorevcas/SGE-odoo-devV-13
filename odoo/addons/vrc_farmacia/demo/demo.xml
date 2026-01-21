@@ -15,15 +15,19 @@
         <record id="medicamento_demo_1" model="vrc_farmacia.medicamento">
             <field name="name">Paracetamol</field>
             <field name="precio">2.50</field>
+            <field name="stock">75</field> 
             <field name="proveedor_id" ref="proveedor_demo_1"/>
         </record>
 
         <record id="medicamento_demo_2" model="vrc_farmacia.medicamento">
             <field name="name">Ibuprofeno</field>
             <field name="precio">3.20</field>
+            <field name="stock">30</field> 
             <field name="proveedor_id" ref="proveedor_demo_2"/>
         </record>
 
+
+        
 
         
         <record id="paciente_demo_1" model="vrc_farmacia.paciente">

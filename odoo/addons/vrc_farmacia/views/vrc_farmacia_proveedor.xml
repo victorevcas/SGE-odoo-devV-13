@@ -18,21 +18,19 @@
                 <form>
                     <sheet>
                         <div class="oe_title">
-                            <label for="name" string="Nombre del Proveedor"/>
+                            <label for="name" string="Proveedor Farmacéutico"/>
                             <h1><field name="name"/></h1>
                         </div>
                         <group>
-                            <group>
-                                <field name="telefono"/>
-                            </group>
+                            <field name="telefono"/>
                         </group>
                         <notebook>
-                            <page string="Productos Suministrados">
+                            <page string="Catálogo de Productos">
                                 <field name="medicamento_ids">
-                                    <tree editable="bottom">
+                                    <tree>
                                         <field name="name"/>
                                         <field name="precio"/>
-                                        <field name="stock"/>
+                                        <field name="stock" widget="progressbar" options="{'max_value': 100}"/>
                                     </tree>
                                 </field>
                             </page>
