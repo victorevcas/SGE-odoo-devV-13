@@ -1,30 +1,61 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="vrc_farmacia.vrc_farmacia">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
 
-          <record id="object1" model="vrc_farmacia.vrc_farmacia">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <record id="proveedor_demo_1" model="vrc_farmacia.proveedor">
+            <field name="name">Laboratorios Bayer</field>
+            <field name="telefono">912345678</field>
+        </record>
 
-          <record id="object2" model="vrc_farmacia.vrc_farmacia">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <record id="proveedor_demo_2" model="vrc_farmacia.proveedor">
+            <field name="name">Pfizer España</field>
+            <field name="telefono">934567890</field>
+        </record>
 
-          <record id="object3" model="vrc_farmacia.vrc_farmacia">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
 
-          <record id="object4" model="vrc_farmacia.vrc_farmacia">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <record id="medicamento_demo_1" model="vrc_farmacia.medicamento">
+            <field name="name">Paracetamol</field>
+            <field name="precio">2.50</field>
+            <field name="proveedor_id" ref="proveedor_demo_1"/>
+        </record>
+
+        <record id="medicamento_demo_2" model="vrc_farmacia.medicamento">
+            <field name="name">Ibuprofeno</field>
+            <field name="precio">3.20</field>
+            <field name="proveedor_id" ref="proveedor_demo_2"/>
+        </record>
+
+
+        
+        <record id="paciente_demo_1" model="vrc_farmacia.paciente">
+            <field name="name">Juan Pérez</field>
+            <field name="edad">45</field>
+            <field name="dni">12345678A</field>
+            <field name="email">juan.perez@email.com</field>
+        </record>
+
+        <record id="paciente_demo_2" model="vrc_farmacia.paciente">
+            <field name="name">María López</field>
+            <field name="edad">32</field>
+            <field name="dni">87654321B</field>
+            <field name="email">maria.lopez@email.com</field>
+        </record>
+
+
+        <record id="receta_demo_1" model="vrc_farmacia.receta">
+            <field name="name">REC-001</field>
+            <field name="paciente_id" ref="paciente_demo_1"/>
+            <field name="medicamento_ids" eval="[(6, 0, [ref('medicamento_demo_1')])]"/>
+        </record>
+
+        <record id="receta_demo_2" model="vrc_farmacia.receta">
+            <field name="name">REC-002</field>
+            <field name="paciente_id" ref="paciente_demo_2"/>
+            <field name="medicamento_ids" eval="[(6, 0, [
+                ref('medicamento_demo_1'),
+                ref('medicamento_demo_2')
+            ])]"/>
+        </record>
+
+
     </data>
 </odoo>
