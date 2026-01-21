@@ -24,6 +24,7 @@ Long description of module's purpose
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'security/security.xml',
         'views/vrc_farmacia_medicamentos.xml',
         'views/vrc_farmacia_paciente.xml',
         'views/vrc_farmacia_proveedor.xml',

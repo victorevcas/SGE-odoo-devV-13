@@ -1,5 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-vrc_farmacia.medicamento_basic_user,vrc_farmacia.medicamento_basic_user,model_vrc_farmacia_medicamento,base.group_user,1,1,1,1
-vrc_farmacia.proveedor_basic_user,vrc_farmacia.proveedor_basic_user,model_vrc_farmacia_proveedor,base.group_user,1,1,1,1
-vrc_farmacia.paciente_basic_user,vrc_farmacia.paciente_basic_user,model_vrc_farmacia_paciente,base.group_user,1,1,1,1
-vrc_farmacia.receta_basic_user,vrc_farmacia.receta_basic_user,model_vrc_farmacia_receta,base.group_user,1,1,1,1
+
+access_medicamento_user,access_medicamento_user,model_vrc_farmacia_medicamento,base.group_user,1,0,1,0
+access_medicamento_admin,access_medicamento_admin,model_vrc_farmacia_medicamento,base.group_system,1,1,1,1
+
+access_proveedor_user,access_proveedor_user,model_vrc_farmacia_proveedor,base.group_user,1,0,1,0
+access_proveedor_admin,access_proveedor_admin,model_vrc_farmacia_proveedor,base.group_system,1,1,1,1
+
+access_paciente_user,access_paciente_user,model_vrc_farmacia_paciente,base.group_user,1,0,1,0
+access_paciente_admin,access_paciente_admin,model_vrc_farmacia_paciente,base.group_system,1,1,1,1
+
+access_receta_user,access_receta_user,model_vrc_farmacia_receta,base.group_user,1,0,1,0
+access_receta_admin,access_receta_admin,model_vrc_farmacia_receta,base.group_system,1,1,1,1
