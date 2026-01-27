@@ -39,5 +39,29 @@
                 </form>
             </field>
         </record>
+        <record id="vrc_farmacia_receta_view_kanban" model="ir.ui.view">
+            <field name="name">vrc_farmacia.receta.kanban</field>
+            <field name="model">vrc_farmacia.receta</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>Paciente: <field name="paciente_id"/></div>
+                                    <div>
+                                        Medicamentos:
+                                        <field name="medicamento_ids" widget="many2many_tags"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
     </data>
 </odoo>

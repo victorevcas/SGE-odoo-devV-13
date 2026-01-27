@@ -33,17 +33,21 @@
 
         
         <record id="paciente_demo_1" model="vrc_farmacia.paciente">
-            <field name="name">Juan Pérez</field>
-            <field name="edad">45</field>
+            <field name="name">Nicolas Maduro</field>
+            <field name="edad">63</field>
             <field name="dni">12345678A</field>
-            <field name="email">juan.perez@email.com</field>
+            <field name="email">nicolas.maduro@gmail.com</field>
+            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/maduro.png"></field>
+
         </record>
 
         <record id="paciente_demo_2" model="vrc_farmacia.paciente">
-            <field name="name">María López</field>
-            <field name="edad">32</field>
+            <field name="name">Will Smith</field>
+            <field name="edad">57</field>
             <field name="dni">87654321B</field>
-            <field name="email">maria.lopez@email.com</field>
+            <field name="email">will.smith@gmail.com</field>
+            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/will.png"></field>
+
         </record>
 
 

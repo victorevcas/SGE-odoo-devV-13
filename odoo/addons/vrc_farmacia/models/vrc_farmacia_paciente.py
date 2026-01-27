@@ -8,6 +8,8 @@ class Paciente(models.Model):
     edad = fields.Integer(string="Edad")
     dni = fields.Char(string="DNI/Pasaporte")
     email = fields.Char(string="Correo Electrónico")
+    imagen = fields.Image(string="Foto", max_width= 1920 , max_height= 1080)
+
     receta_ids = fields.One2many(
         'vrc_farmacia.receta',
         'paciente_id',

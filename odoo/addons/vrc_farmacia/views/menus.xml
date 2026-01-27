@@ -13,19 +13,19 @@
     <record id="vrc_farmacia.proveedor_action" model="ir.actions.act_window">
         <field name="name">Proveedores</field>
         <field name="res_model">vrc_farmacia.proveedor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <record id="vrc_farmacia.paciente_action" model="ir.actions.act_window">
         <field name="name">Pacientes</field>
         <field name="res_model">vrc_farmacia.paciente</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <record id="vrc_farmacia.receta_action" model="ir.actions.act_window">
         <field name="name">Recetas</field>
         <field name="res_model">vrc_farmacia.receta</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
 
 

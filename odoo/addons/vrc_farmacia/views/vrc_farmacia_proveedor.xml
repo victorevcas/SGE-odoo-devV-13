@@ -39,5 +39,26 @@
                 </form>
             </field>
         </record>
+        <record id="vrc_farmacia_proveedor_view_kanban" model="ir.ui.view">
+            <field name="name">vrc_farmacia.proveedor.kanban</field>
+            <field name="model">vrc_farmacia.proveedor</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                    <div>Teléfono: <field name="telefono"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
     </data>
 </odoo>
