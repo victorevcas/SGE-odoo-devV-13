@@ -52,7 +52,7 @@
                 </form>
             </field>
         </record>
-       <record id="vrc_farmacia_paciente_view_kanban" model="ir.ui.view">
+        <record id="vrc_farmacia_paciente_view_kanban" model="ir.ui.view">
             <field name="name">vrc_farmacia.paciente.kanban</field>
             <field name="model">vrc_farmacia.paciente</field>
             <field name="arch" type="xml">
@@ -80,6 +80,34 @@
                         </t>
                     </templates>
                 </kanban>
+            </field>
+        </record>
+        <record id="vrc_farmacia_paciente_view_search" model="ir.ui.view">
+            <field name="name">vrc_farmacia.paciente.search</field>
+            <field name="model">vrc_farmacia.paciente</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Pacientes">
+                   
+                    <field name="name"/>
+                    <field name="dni"/>
+                    <field name="email"/>
+
+                    
+                    <filter string="Mayores de 50"
+                            name="mayores_50"
+                            domain="[('edad','>',50)]"/>
+
+                    <filter string="Con email"
+                            name="con_email"
+                            domain="[('email','!=',False)]"/>
+
+                    
+                    <group expand="0" string="Agrupar por">
+                        <filter string="Edad"
+                                name="group_by_edad"
+                                context="{'group_by':'edad'}"/>
+                    </group>
+                </search>
             </field>
         </record>
 
