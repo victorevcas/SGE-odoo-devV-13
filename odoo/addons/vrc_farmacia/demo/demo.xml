@@ -28,16 +28,24 @@
             <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/ibuprofeno.png"></field>
         </record>
 
+        <record id="medicamento_demo_3" model="vrc_farmacia.medicamento">
+            <field name="name">Nolotil</field>
+            <field name="precio">3.20</field>
+            <field name="stock">60</field> 
+            <field name="proveedor_id" ref="proveedor_demo_2"/>
+            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/nolotil.png"></field>
+        </record>
+
 
         
 
         
         <record id="paciente_demo_1" model="vrc_farmacia.paciente">
-            <field name="name">Nicolas Maduro</field>
-            <field name="edad">63</field>
+            <field name="name">Cristiano Ronaldo</field>
+            <field name="edad">40</field>
             <field name="dni">12345678A</field>
-            <field name="email">nicolas.maduro@gmail.com</field>
-            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/maduro.png"></field>
+            <field name="email">cristiano.ronaldo@gmail.com</field>
+            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/cristiano.png"></field>
 
         </record>
 
@@ -47,7 +55,14 @@
             <field name="dni">87654321B</field>
             <field name="email">will.smith@gmail.com</field>
             <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/will.png"></field>
+        </record>
 
+        <record id="paciente_demo_3" model="vrc_farmacia.paciente">
+            <field name="name">Elon Musk</field>
+            <field name="edad">54</field>
+            <field name="dni">76859401W</field>
+            <field name="email">elon.musk@gmail.com</field>
+            <field name="imagen" type="base64" file = "vrc_farmacia/demo/images/elon.png"></field>
         </record>
 
 
@@ -63,6 +78,15 @@
             <field name="medicamento_ids" eval="[(6, 0, [
                 ref('medicamento_demo_1'),
                 ref('medicamento_demo_2')
+            ])]"/>
+        </record>
+
+        <record id="receta_demo_3" model="vrc_farmacia.receta">
+            <field name="name">REC-003</field>
+            <field name="paciente_id" ref="paciente_demo_3"/>
+            <field name="medicamento_ids" eval="[(6, 0, [
+                ref('medicamento_demo_2'),
+                ref('medicamento_demo_3')
             ])]"/>
         </record>
 
