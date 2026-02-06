@@ -60,7 +60,7 @@
                         <div class="oe_kanban_card oe_kanban_global_click">
 
                             <div class="o_kanban_image">
-                                <img t-if="record.imagen.raw_value"
+                                <img t-if="record.imagen.raw_value" alt = "imagen medicamento"
                                      t-att-src="kanban_image('vrc_farmacia.medicamento', 'imagen', record.id.value)"
                                      class="oe_kanban_avatar"/>
                             </div>

@@ -11,6 +11,21 @@
                 </tree>
             </field>
         </record>
+
+        <record id="vrc_farmacia.receta_view_tree" model="ir.ui.view">
+            <field name="name">vrc_farmacia.receta.tree</field>
+            <field name="model">vrc_farmacia.receta</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="paciente_id"/>
+                    <field name="total_medicamentos"/>
+                    <field name="coste_total"/>
+                    <field name="estado"/>
+                </tree>
+            </field>
+        </record>
+
         <record id="vrc_farmacia.receta_view_form" model="ir.ui.view">
             <field name="name">vrc_farmacia.receta.form</field>
             <field name="model">vrc_farmacia.receta</field>
@@ -21,10 +36,18 @@
                     </header>
                     <sheet>
                         <h1><field name="name"/></h1>
+
                         <group>
                             <field name="paciente_id"/>
                             <field name="fecha"/>
                         </group>
+
+                        <group string="Resumen de la receta">
+                            <field name="total_medicamentos" readonly="1"/>
+                            <field name="coste_total" readonly="1"/>
+                            <field name="nombre_paciente" readonly="1"/>
+                        </group>
+
                         <notebook>
                             <page string="Medicamentos Recetados">
                                 <field name="medicamento_ids">
@@ -35,10 +58,12 @@
                                 </field>
                             </page>
                         </notebook>
+
                     </sheet>
                 </form>
             </field>
         </record>
+
         <record id="vrc_farmacia_receta_view_kanban" model="ir.ui.view">
             <field name="name">vrc_farmacia.receta.kanban</field>
             <field name="model">vrc_farmacia.receta</field>
@@ -48,10 +73,12 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_card">
                                 <div class="oe_kanban_details">
-                                    <strong>
-                                        <field name="name"/>
-                                    </strong>
+                                    <strong><field name="name"/></strong>
+
                                     <div>Paciente: <field name="paciente_id"/></div>
+                                    <div>Total medicamentos: <field name="total_medicamentos"/></div>
+                                    <div>Coste total: <field name="coste_total"/> €</div>
+
                                     <div>
                                         Medicamentos:
                                         <field name="medicamento_ids" widget="many2many_tags"/>
@@ -63,5 +90,6 @@
                 </kanban>
             </field>
         </record>
+
     </data>
 </odoo>
